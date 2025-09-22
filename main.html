@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form example</title>
+</head>
+<body>
+    <fieldset style="width: 300px; margin-left: 20px;">
+        <legend><b>User Information</b></legend>
+        <form action="/submit" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" required></td>
+                </tr>
+                
+            </table>
+        </form>
+    </fieldset>
+
+    <fieldset style="width: 300px; margin-left: 20px;">
+    <legend><b>Contact Information</b></legend>
+    <form action="/submit" method="post">
+        <table>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="text" name="number" required></td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td><textarea name="message" rows="4" cols="25" required></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <button type="submit">Send</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+
+<fieldset style="width: 300px; margin-left: 20px;">
+    <legend><b>Contact Information</b></legend>
+    <form action="/submit" method="post">
+        <table>
+           <tr>
+                <td>subscription:</td>
+                <td>
+                    <input type="checkbox" name="subscription to newletter" value="subscription to newletter">
+                </td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+
+<fieldset style="width: 300px; margin-left: 20px;">
+    <legend><b>preferred language</b></legend>
+    <form action="/submit" method="post">
+        <table>
+            <tr>
+                <td>preferred language:</td>
+                <td>
+                    <select name="opinion" required>
+                        <option value="">--Select--</option>
+                        <option value="english">english</option>
+                        <option value="arabic">arabic</option>
+                        <option value="german">german</option>
+                        <option value="french">french</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+
+<fieldset style="width: 300px; margin-left: 20px;">
+    <legend><b>feedback </b></legend>
+    <form action="/submit" method="post">
+        <table>
+            <p>rate us:</p>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+
+            <script>
+                    const player = document.getElementById("player");
+                    const volumeControl = document.getElementById("volume");
+
+        volumeControl.addEventListener("input", function () {
+            player.volume = this.value;
+        });
+    </script>
+        </table>
+    </form>
+</fieldset>
+
+<div style="margin-left: 20px; margin-top: 10px;">
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</div>
+
+</body>
+</html>
